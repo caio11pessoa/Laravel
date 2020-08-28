@@ -25,3 +25,17 @@ Route::get('/seunome/{nome?}/', function($nome=null){
     return "Voce nao digitou nenhum nome";
 
 });
+
+Route::prefix('/app')->group(function() {
+
+
+
+    Route::get('/user', function() {
+        return "User";
+    });
+
+    Route::get('/profile', function(){
+        return "Profile";
+    });
+
+});
