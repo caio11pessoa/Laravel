@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/ola/{nome}/{sobrenome}', function($nome, $sobrenome){
+    echo "Olá! Seja Bem Vindo, $nome $sobrenome!";
+});
+
+Route::get('/seunome/{nome?}/', function($nome=null){
+    if(isset($nome))
+        return "Olá! Seja Bem Vindo, $nome!";  
+    return "Voce nao digitou nenhum nome";
+
+});
